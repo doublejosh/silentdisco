@@ -97,11 +97,16 @@
 
     .page-wrapper {
       background-size: 100%;
-      padding:0 0 4em 0;
+      padding:0 0 2em 0;
       min-height: 100%;
       overflow: auto;
-      box-shadow: inset 0 0 20px #000;
       padding-right: 25%;
+      background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(1%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+      background: -ms-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0) 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0) 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
     }
 
     .bk {
@@ -221,14 +226,18 @@
       .group__grid-col__grid-1of4 {
         width: 100%;
       }
-      .bk-intro,
-      .bk-header__title {
+      .bk-header,
+      .bk-cta {
         text-align: center;
       }
       .bk-header__title {
         font-size: 1.75em;
       }
       .bk-contact a { font-size: 1em; }
+      a.bk__button {
+        font-size: 1.5em;
+        float: none;
+      }
     }
     @media only screen and (max-width: 480px) {
       .bk-header__title {
@@ -248,9 +257,9 @@
     <article class="group">
       <div class="group__grid-col group__grid-col__grid-2of4">
 
-        <div class="bk bk-unstyled">
+        <div class="bk bk-header">
           <img src="images/octo.png" alt="A partying octopus" />
-          <h2>Unleash your party animals.</h2>
+          <h2>Unleash your party animals</h2>
         </div>
 
         <div class="bk bk-cta">
