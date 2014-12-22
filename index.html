@@ -7,200 +7,349 @@
   <title>Seattle Silent Party Rental - Host a silent disco!</title>
   <meta name="description" content="Host a silent disco! Make your next party the shhhhiz." />
   <style type="text/css" media="all">
-    html {
-      height:100%; margin:0; padding:0;
-    }
     /* https://www.behance.net/gallery/18068463/Anders-%28Free-Font%29 */
     @font-face{
-      font-family:"Anders";
-      src:local('☺');
-      src:url("/font/Anders.eot?#iefix") format('embedded-opentype'),
-          url("/font/Anders.woff") format("woff"),
-          url("/font/Anders.ttf") format("truetype"),
-          url("/font/Anders.svg") format("svg");
-      font-weight:normal;
-      font-style:normal;
+      font-family: "Anders";
+      src: local('☺');
+      src: url("/font/Anders.eot?#iefix") format('embedded-opentype'),
+           url("/font/Anders.woff") format("woff"),
+           url("/font/Anders.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
     }
-    h1, h2, h3 {
-      font-family: 'Anders', sans-serif;
-      margin: 1em 25% 1em 5%;
+
+    html {
+      height:100%;
+      margin:0;
+      padding:0;
     }
-    h1 .color1 {
-      color: #3170ee;
-    }
-    h1 .color2 {
-      color: #ec2e6d;
-    }
-    h1 .color3 {
-      color: #548e3a;
-    }
-    h2 { font-size:2em; }
     body {
       overflow: auto;
+      height: 100%;
+      margin: 0;
+      padding: 0;
       font-size: 16px;
       line-height: 1.5em;
-      font-family: 'Anders', sans-serif;
-      margin:0; padding:0;
-      height:100%; color:#eee;
-      background: #111; text-shadow: 2px 2px 1px #000;
-    }
-    a, a:link, a:visited, a:active, a:focus {
-      color:#E8007A; text-decoration: none;
-      text-shadow: 1px 1px 0 #000;
-    }
-    a.button {
-      background:#E8007A; color:#fff; padding: 0.5em 1em;
-      text-shadow: -2px -2px 0 #A3005A; font-size: 2em; border:1px solid #C3007A;
-      display: block; cursor: pointer; float:left;
-      -moz-box-shadow:inset 0px 1px 0px 0px #E27F9B;
-      -webkit-box-shadow:inset 0px 1px 0px 0px #E27F9B;
-      box-shadow:inset 0px 1px 0px 0px #E27F9B;
-      background-image:
-        -webkit-linear-gradient(283deg, rgba(255,255,255,0.1) 50%, transparent 55%),
-        -webkit-linear-gradient(top, rgba(255,255,255,0.15), transparent);
-    }
-    a.button:hover {
-      background-color:#C3007A;
-    }
-    #wrapper {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: normal;
+      color: #eee;
       background: #4c3f43;
-      background-size: 100%; padding:0 0 4em 0;
-      min-height:100%; overflow: auto;
-      box-shadow:inset 0 0 20px #000;
+      text-shadow: 2px 1px 1px #333;
     }
-    h3.headline {
-      font-family: 'Anders', cursive; font-weight: normal;
-      font-size: 6em; color:#B0FF03; text-shadow: 2px 2px 0 #000;
-      padding:0.25em 0.5em 0.25em 5%; width:65%; text-align: left;
-      letter-spacing: -2px; line-height: 1em; margin:0.25em auto 0.25em 0;
-      position: relative; overflow: hidden; z-index: 1;
+
+    .group {
+      clear: both;
+      padding: 0px;
+      margin: 0px;
+      zoom:1;
     }
-    h1 { font-variant:small-caps; }
-    h2 { color: #F2CB05; line-height: 1em; }
-    h3.headline:before {
-      z-index:-1; position:absolute;
-      left:0; top:0; right:0; bottom:0;
-      background:#000; opacity:0.7;
-      content: '';
+    .group:before,
+    .group:after {
+      content:"";
+      display:table;
     }
-    article {
+    .group:after {
+      clear:both;
+    }
+    .group__grid-col {
+      display: block;
+      float:left;
+      margin: 1% 0 1% 2%;
+    }
+    .group__grid-col:first-child { margin-left: 0; }
+    .group__grid-col__grid-4of4 {
+      width: 100%;
+    }
+    .group__grid-col__grid-3of4 {
+      width: 74.5%;
+    }
+    .group__grid-col__grid-2of4 {
+      width: 49%;
+    }
+    .group__grid-col__grid-1of4 {
+      width: 23.5%;
+    }
+    .group__grid-col img { width: 100%; }
+
+    h1, h2 {
+      font-family: 'Anders', sans-serif;
+    }
+    h1, h2, h3 {
+      margin: 1em 0;
+    }
+    h2 {
+      font-size: 2em;
+      font-variant: small-caps;
+      color: #F2CB05;
+      line-height: 1em;
+    }
+    h3 {
+      font-weight: 300;
+    }
+
+    a, a:link, a:visited, a:active, a:focus {
+      color:#3c77ee;
+      text-decoration: none;
+      text-shadow: 1px 1px 0 #000;
+      font-weight: 700;
+    }
+
+    .page-wrapper {
+      background-size: 100%;
+      padding:0 0 4em 0;
+      min-height: 100%;
+      overflow: auto;
+      box-shadow: inset 0 0 20px #000;
+      padding-right: 25%;
+    }
+
+    .bk {
       clear:left;
-      position: relative; overflow: hidden; z-index: 1;
-      text-align: left; margin: 1em 25% 1em 5%;
-      min-width: 300px; max-width: 700px;
-      overflow: hidden; padding:1em; left:-1em;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      text-align: left;
+      margin: 1em 0;
+      overflow: hidden;
+      padding: 1em;
     }
-    article p { margin-top:0; }
-    article li {
-      font-size: 1.25em;
-      margin-bottom: 0.25em;
+      .bk:before {
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        opacity: 0.1;
+        content: '';
+      }
+      a.bk__button {
+        background: #DF2F5F;
+        color: #fff;
+        padding: 0.5em 1em;
+        text-shadow: -2px -2px 0 #d90354;
+        font-size: 2em;
+        font-weight: bold;
+        display: block;
+        cursor: pointer;
+        float: left;
+        background-image:
+          -webkit-linear-gradient(283deg, rgba(255,255,255,0.1) 50%, transparent 55%),
+          -webkit-linear-gradient(top, rgba(255,255,255,0.15), transparent);
+      }
+      a.bk__button:hover {
+        background-color: #d90354;
+      }
+      .bk p { margin-top: 0; }
+
+      .bk-summary__graphic {
+        padding: 1em 0;
+      }
+
+      .bk-header {
+          margin: 0em;
+        }
+        .bk-header:before {
+          background: none;
+        }
+        .bk-header__title {
+          line-height: 1.1em;
+          font-size: 2.5em;
+          overflow: hidden;
+        }
+        .bk-header__color1 {
+          color: #3170ee;
+        }
+        .bk-header__color2 {
+          color: #ec2e6d;
+          clear: left;
+        }
+        .bk-header__color3 {
+          position: relative;
+          top: -0.25em;
+          margin-left: 0.1em;
+          font-size: 2.25em;
+          color: #548e3a;
+        }
+        .bk-header__color1,
+        .bk-header__color2,
+        .bk-header__color3 {
+          float: left;
+        }
+
+      .bk-social__twitter { margin-right: 1em; }
+      .bk-social__fb-like { top: 4px; }
+
+      .bk-contact a { font-size: 1.5em; }
+
+      .bk-unstyled:before {
+        display: none;
+      }
+
+      .bk-summary {
+        margin-top: 0;
+        font-size: 0.875em;
+        line-height: 1.5em;
+      }
+      .bk-agreement { margin-bottom: 0; }
+      .bk-agreement:before { opacity: 0.3; }
+      .list__unstyled {
+        list-style: none;
+        padding-left: 0;
+        font-size: 1.25em;
+        margin-bottom: 0.25em;
+      }
+      .list__light {
+        color: #999;
+        font-size: 0.875em;
+      }
+
+    @media only screen and (max-width: 1024px) {
+      .page-wrapper {
+        padding-right: 0;
+      }
     }
-    article:before {
-      z-index:-1; position:absolute;
-      left:0; top:0; right:0; bottom:0;
-      background:#000; opacity:0.5;
-      content: '';
+    @media only screen and (max-width: 640px) {
+      .group__grid-col {
+        margin: 1% 0 1% 0%;
+      }
+      .group__grid-col__grid-3of4,
+      .group__grid-col__grid-3of4,
+      .group__grid-col__grid-2of4,
+      .group__grid-col__grid-1of4 {
+        width: 100%;
+      }
+
+      .bk-header__title {
+        font-size: 1.75em;
+      }
     }
-    article.contact a {
-      font-size: 1.5em;
+    @media only screen and (max-width: 480px) {
+      .bk-header__title {
+        font-size: 1.25em;
+      }
     }
-    .social { float:left; }
-    .twitter-share-button { margin-right: 1em; }
-    .fb-like { top:4px; }
   </style>
 </head>
 <body>
 
-<div id="wrapper">
+  <div id="wrapper" class="page-wrapper">
 
-  <h1><span class="color1">Silent</span> <span class="color2">Party</span> <span class="color3">Seattle</span></h1>
+    <div class="bk bk-header">
+      <h1 class="bk-header__title"><span class="bk-header__color1">Silent</span> <span class="bk-header__color2">Party</span> <span class="bk-header__color3">Seattle</span></h1>
+    </div>
 
-  <h2>Throw your very own silent disco.<br /> Just like you always wanted.</h2>
+    <article class="group">
+      <div class="group__grid-col group__grid-col__grid-2of4">
 
-  <article class="social">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-count="none" data-hashtags="silentDisco">Tweet</a>
-    <div class="fb-like" data-send="true" data-width="300" data-show-faces="true" data-font="verdana" data-colorscheme="dark"></div>
-  </article>
+        <div class="bk bk-unstyled">
+          <img src="images/octo.png" alt="A partying octopus" />
+          <h2>Unleash your party animals.</h2>
+        </div>
 
-  <article>
-    <p>
-      You already know but... silent disco is a new way to deliver music at events, through high-quality wireless heaphones, with no ambient noise.
-      This technology is great for all kinds of events from private dance parties to weddings, outdoor movies, chorus recording sessions, lectures, theatre and art installations.
-    </p>
-    <ul>
-      <li>Remove headphones and have a conversation or order a drink.</li>
-      <li>Simultaneous DJs!</li>
-      <li>Guests can pick a channel, headphone light color will display choice.</li>
-      <li>Guests can control volume and participation.</li>
-    </ul>
-    <p>
-      Envision the crowd at your event dancing and enjoying music without the blasting speakers.
-      Your guests will be able to listen in or take a break; actaully have a conversation, order a drink, then join back in the audio action.
-      Holding silent events make them special. It's normal for smiles to be stuck on the faces of your guests.
-      The name "silent disco" has become the catch phrase for this type of technology used for parties.  BTW: '70s music not necessarily required.
-    </p>
-  </article>
+        <div class="bk bk-cta">
+          <a class="bk__button" href="mailto:info@silentpartyseattle.com">Get Started Now!</a>
+        </div>
 
-  <article>
-    <p><strong>RENTAL FEES:</strong></p>
-    <ul>
-      <li>Headphones: $6/ea day</li>
-      <li>Transmitters & Chargers: $99</li>
-      <li>Deposit: $300 (refundable)</li>
-      <li>Lost/broken headphones: $45/ea</li>
-      <li>On-site Expert: free with $500 rental</li>
-    </ul>
-  </article>
+        <div class="bk bk-contact">
+          <a href="tel:2068010732">206.801.0SEA (0732)</a><br />
+          <a href="mailto:info@silentpartyseattle.com">info@silentpartyseattle.com</a>
+        </div>
 
-  <article>
-    <a class="button" href="mailto:info@silentpartyseattle.com">Get Started Now!</a>
-  </article>
+        <div class="bk bk-social">
+          <a href="https://twitter.com/share" class="bk-social__twitter" data-size="large" data-count="none" data-hashtags="silentDisco">Tweet</a>
+          <div class="bk-social__fb-like" data-send="true" data-width="300" data-show-faces="true" data-font="verdana" data-colorscheme="dark"></div>
+        </div>
 
-  <article class="contact">
-    <a href="tel:2068010732">206.801.0SEA (0732)</a><br />
-    <a href="mailto:info@silentpartyseattle.com">info@silentpartyseattle.com</a>
-  </article>
+        <div class="bk bk-unstyled">
+          <h3>Throw your very own silent disco!<br /> Just like you always wanted.</h3>
+        </div>
 
-</div>
+      </div>
+      <div class="group__grid-col group__grid-col__grid-2of4">
 
-<div id="fb-root"></div>
-<script type="text/javascript">
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=5717353044";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
+        <div class="bk bk-agreement">
+          <ul class="list__unstyled">
+            <li><strong>$6/ea day</strong> - headphones</li>
+            <li><strong>$99 - transmitters</strong> / chargers</li>
+            <li>Easy.</li>
+          </ul>
+          <ul class="list__unstyled list__light">
+            <li>Lost/broken - $45/ea</li>
+            <li>Deposit - $300 (refundable)</li>
+            <li>On-site Expert - free w/ $500 rental</li>
+          </ul>
+        </div>
+        <div class="bk bk-contact">
+          <a href="mailto:info@silentpartyseattle.com">info@silentpartyseattle.com</a>
+        </div>
+        <div class="bk bk-summary">
 
-<script type="text/javascript">
-!function(d,s,id){
-  var js,fjs=d.getElementsByTagName(s)[0];
-  if(!d.getElementById(id)){
-    js=d.createElement(s);
-    js.id=id;js.src="//platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js,fjs);
-  }
-}(document,"script","twitter-wjs");
-</script>
+          <img src="images/party-friends.png" class="bk-summary__graphic" alt="Wacky characters, ready for a good time" />
+          <p>
+            You already know but... silent disco is a new way to deliver music at events, through high-quality wireless heaphones, with no ambient noise.
+            This technology is great for all kinds of events from private dance parties to weddings, outdoor movies, chorus recording sessions, lectures, theatre and art installations.
+          </p>
+          <ul>
+            <li>Remove headphones and have a conversation or order a drink.</li>
+            <li>Simultaneous DJs!</li>
+            <li>Guests can pick a channel, headphone light color will display choice.</li>
+            <li>Guests can control volume and participation.</li>
+          </ul>
+          <p>
+            Envision the crowd at your event dancing and enjoying music without the blasting speakers.
+            Your guests will be able to listen in or take a break; actaully have a conversation, order a drink, then join back in the audio action.
+            Holding silent events make them special. It's normal for smiles to be stuck on the faces of your guests.
+            The name "silent disco" has become the catch phrase for this type of technology used for parties.  BTW: '70s music not necessarily required.
+          </p>
+        </div>
 
-<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-40224940-1']);
-_gaq.push(['_setDomainName', 'A.com']);
-_gaq.push(['_setAllowLinker', true]);
-_gaq.push(['_trackPageview']);
+      </div>
+    </article>
 
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript';
-  ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
-  'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(ga, s);
-})();
-</script>
+  <div>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=5717353044";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <script>
+    !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;js.src="//platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js,fjs);
+      }
+    }(document,"script","twitter-wjs");
+  </script>
+
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-40224940-1']);
+    _gaq.push(['_setDomainName', 'A.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+      'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 
 </body>
 </html>
