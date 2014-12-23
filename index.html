@@ -58,18 +58,10 @@
       margin: 1% 0 1% 2%;
     }
     .group__grid-col:first-child { margin-left: 0; }
-    .group__grid-col__grid-4of4 {
-      width: 100%;
-    }
-    .group__grid-col__grid-3of4 {
-      width: 74.5%;
-    }
-    .group__grid-col__grid-2of4 {
-      width: 49%;
-    }
-    .group__grid-col__grid-1of4 {
-      width: 23.5%;
-    }
+    .group__grid-col--grid-4of4 { width: 100%; }
+    .group__grid-col--grid-3of4 { width: 74.5%; }
+    .group__grid-col--grid-2of4 { width: 49%; }
+    .group__grid-col--grid-1of4 { width: 23.5%; }
     .group__grid-col img { width: 100%; }
 
     h1, h2 {
@@ -149,64 +141,64 @@
       }
       .bk p { margin-top: 0; }
 
-      .bk-summary__graphic {
+      .bk--summary .bk__graphic {
         padding: 1em 0;
       }
 
-      .bk-header {
+      .bk--header {
           margin: 0em;
         }
-        .bk-header:before {
+        .bk--header:before {
           background: none;
         }
-        .bk-header__title {
+        .bk--header .bk__title {
           line-height: 1.1em;
           font-size: 2.5em;
           overflow: hidden;
         }
-        .bk-header__color1 {
+        .bk--header .bk__color1 {
           color: #3170ee;
         }
-        .bk-header__color2 {
+        .bk--header .bk__color2 {
           color: #ec2e6d;
           clear: left;
         }
-        .bk-header__color3 {
+        .bk-header .bk__color3 {
           position: relative;
           top: -0.25em;
           margin-left: 0.1em;
           font-size: 2em;
           color: #548e3a;
         }
-        .bk-header__color1,
-        .bk-header__color2,
-        .bk-header__color3 {
+        .bk--header__color1,
+        .bk--header__color2,
+        .bk--header__color3 {
           float: left;
         }
 
-      .bk-social__twitter { margin-right: 1em; }
-      .bk-social__fb-like { top: 4px; }
+      .bk--social .bk__twitter { margin-right: 1em; }
+      .bk--social .bk__fb-like { top: 4px; }
 
-      .bk-contact a { font-size: 1.5em; }
+      .bk-c-ontact a { font-size: 1.5em; }
 
-      .bk-unstyled:before {
+      .bk--unstyled:before {
         display: none;
       }
 
-      .bk-summary {
+      .bk--summary {
         margin-top: 0;
         font-size: 0.875em;
         line-height: 1.5em;
       }
-      .bk-agreement { margin-bottom: 0; }
-      .bk-agreement:before { opacity: 0.3; }
-      .list__unstyled {
+      .bk--agreement { margin-bottom: 0; }
+      .bk--agreement:before { opacity: 0.3; }
+      .list--unstyled {
         list-style: none;
         padding-left: 0;
         font-size: 1.25em;
         margin-bottom: 0.25em;
       }
-      .list__light {
+      .list--light {
         color: #999;
         font-size: 0.875em;
       }
@@ -220,27 +212,27 @@
       .group__grid-col {
         margin: 1% 0 1% 0%;
       }
-      .group__grid-col__grid-3of4,
-      .group__grid-col__grid-3of4,
-      .group__grid-col__grid-2of4,
-      .group__grid-col__grid-1of4 {
+      .group__grid-col--grid-3of4,
+      .group__grid-col--grid-3of4,
+      .group__grid-col--grid-2of4,
+      .group__grid-col--grid-1of4 {
         width: 100%;
       }
-      .bk-header,
-      .bk-cta {
+      .bk--header,
+      .bk--cta {
         text-align: center;
       }
-      .bk-header__title {
+      .bk--header .bk__title {
         font-size: 1.75em;
       }
-      .bk-contact a { font-size: 1em; }
+      .bk--contact a { font-size: 1em; }
       a.bk__button {
         font-size: 1.5em;
         float: none;
       }
     }
     @media only screen and (max-width: 480px) {
-      .bk-header__title {
+      .bk--header .bk__title {
         font-size: 1.25em;
       }
     }
@@ -250,59 +242,57 @@
 
   <div id="wrapper" class="page-wrapper">
 
-    <div class="bk bk-header">
-      <h1 class="bk-header__title"><span class="bk-header__color1">Silent</span> <span class="bk-header__color2">Party</span> <span class="bk-header__color3">Seattle</span></h1>
+    <div class="bk bk--header">
+      <h1 class="bk__title"><span class="bk__color1">Silent</span> <span class="bk__color2">Party</span> <span class="bk__color3">Seattle</span></h1>
     </div>
 
     <article class="group">
-      <div class="group__grid-col group__grid-col__grid-2of4">
+      <div class="group__grid-col group__grid-col--grid-2of4">
 
-        <div class="bk bk-header">
+        <div class="bk bk--header">
           <img src="images/octo.png" alt="A partying octopus" />
           <h2>Unleash your party animals</h2>
         </div>
 
-        <div class="bk bk-cta">
+        <div class="bk bk--cta">
           <a class="bk__button" href="mailto:info@silentpartyseattle.com">Get Started Now!</a>
         </div>
 
-        <div class="bk bk-contact">
+        <div class="bk bk--contact">
           <a href="tel:2068010732">206.801.0SEA (0732)</a><br />
           <a href="mailto:info@silentpartyseattle.com">info@silentpartyseattle.com</a>
         </div>
 
-        <div class="bk bk-social">
-          <a class="bk-social__twitter" href="https://twitter.com/share" data-size="large" data-count="none" data-hashtags="silentDisco">Tweet</a>
-          <div class="fb-facepile bk-social__fb-like" data-href="http://silentpartyseattle.com" data-max-rows="1" data-colorscheme="dark" data-size="medium" data-show-count="true"></div>
-
-
+        <div class="bk bk--social">
+          <a class="bk__twitter" href="https://twitter.com/share" data-size="large" data-count="none" data-hashtags="silentDisco">Tweet</a>
+          <div class="fb-facepile bk__fb-like" data-href="http://silentpartyseattle.com" data-max-rows="1" data-colorscheme="dark" data-size="medium" data-show-count="true"></div>
         </div>
 
-        <div class="bk bk-unstyled">
+        <div class="bk bk--unstyled">
           <h3>Throw your very own silent disco!<br /> Just like you always wanted.</h3>
         </div>
 
       </div>
-      <div class="group__grid-col group__grid-col__grid-2of4">
+      <div class="group__grid-col group__grid-col--grid-2of4">
 
-        <div class="bk bk-agreement">
-          <ul class="list__unstyled">
+        <div class="bk bk--agreement">
+          <ul class="list--unstyled">
             <li><strong>$6/ea day</strong> - headphones</li>
             <li><strong>$99 - transmitters</strong> / chargers</li>
             <li>Easy.</li>
           </ul>
-          <ul class="list__unstyled list__light">
+          <ul class="list--unstyled list--light">
             <li>Lost/broken - $45/ea</li>
             <li>Deposit - $300 (refundable)</li>
             <li>On-site Expert - free w/ $500 rental</li>
           </ul>
         </div>
-        <div class="bk bk-contact">
+        <div class="bk bk--contact">
           <a href="mailto:info@silentpartyseattle.com">info@silentpartyseattle.com</a>
         </div>
-        <div class="bk bk-summary">
+        <div class="bk bk--summary">
 
-          <img src="images/party-friends.png" class="bk-summary__graphic" alt="Wacky characters, ready for a good time" />
+          <img src="images/party-friends.png" class="bk__graphic" alt="Wacky characters, ready for a good time" />
           <p>
             You already know but... silent disco is a new way to deliver music at events, through high-quality wireless heaphones, with no ambient noise.
             This technology is great for all kinds of events from private dance parties to weddings, outdoor movies, chorus recording sessions, lectures, theatre and art installations.
