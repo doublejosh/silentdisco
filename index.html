@@ -122,6 +122,10 @@
         opacity: 0.1;
         content: '';
       }
+      .bk--unstyled:before {
+        display: none;
+      }
+
       a.bk__button {
         background: #DF2F5F;
         color: #fff;
@@ -141,10 +145,6 @@
       }
       .bk p { margin-top: 0; }
 
-      .bk--summary .bk__graphic {
-        padding: 1em 0;
-      }
-
       .bk--header {
           margin: 0em;
         }
@@ -152,56 +152,52 @@
           background: none;
         }
         .bk--header .bk__title {
+          float: left;
+          overflow: hidden;
           line-height: 1.1em;
           font-size: 2.5em;
-          overflow: hidden;
         }
-        .bk__color1 {
+        .bk--header .bk__color1 {
+          float: left;
           color: #3170ee;
         }
-        .bk__color2 {
-          color: #ec2e6d;
+        .bk--header .bk__color2 {
           clear: left;
+          color: #ec2e6d;
         }
-        .bk__color3 {
+        .bk--header .bk__color3 {
           position: relative;
           top: -0.25em;
+          float: left;
           margin-left: 0.1em;
           font-size: 2em;
           color: #548e3a;
         }
-        .bk__color1,
-        .bk__color2,
-        .bk__color3 {
-          float: left;
-        }
-
-      .bk--social .bk__twitter { margin-right: 1em; }
-      .bk--social .bk__fb-like { top: 4px; }
-
-      .bk-c-ontact a { font-size: 1.5em; }
-
-      .bk--unstyled:before {
-        display: none;
-      }
 
       .bk--summary {
         margin-top: 0;
         font-size: 0.875em;
         line-height: 1.5em;
       }
+        .bk--summary .bk__graphic {
+          padding: 1em 0;
+        }
+      .bk--social .bk__twitter { margin-right: 1em; }
+      .bk--social .bk__fb-like { top: 4px; }
+      .bk--contact a { font-size: 1.5em; }
       .bk--agreement { margin-bottom: 0; }
-      .bk--agreement:before { opacity: 0.3; }
-      .list--unstyled {
-        list-style: none;
-        padding-left: 0;
-        font-size: 1.25em;
-        margin-bottom: 0.25em;
-      }
-      .list--light {
-        color: #999;
-        font-size: 0.875em;
-      }
+        .bk--agreement:before { opacity: 0.3; }
+
+    .list--unstyled {
+      list-style: none;
+      padding-left: 0;
+      font-size: 1.25em;
+      margin-bottom: 0.25em;
+    }
+    .list--light {
+      color: #999;
+      font-size: 0.875em;
+    }
 
     @media only screen and (max-width: 1024px) {
       .page-wrapper {
